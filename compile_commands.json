@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/q/Documents/Projects/06-01-2020/hwid/build",
+  "command": "/usr/bin/gcc -Dhwid_EXPORTS -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol   --std=c11 -DGNU_EFI_USE_MS_ABI -fno-stack-protector -fpic -fshort-wchar -mno-red-zone -Wall -Werror -fPIC   -o CMakeFiles/hwid.dir/CMakeFiles/3.17.2/CompilerIdC/CMakeCCompilerId.c.o   -c /home/q/Documents/Projects/06-01-2020/hwid/build/CMakeFiles/3.17.2/CompilerIdC/CMakeCCompilerId.c",
+  "file": "/home/q/Documents/Projects/06-01-2020/hwid/build/CMakeFiles/3.17.2/CompilerIdC/CMakeCCompilerId.c"
+},
+{
+  "directory": "/home/q/Documents/Projects/06-01-2020/hwid/build",
+  "command": "/usr/bin/gcc -Dhwid_EXPORTS -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol   --std=c11 -DGNU_EFI_USE_MS_ABI -fno-stack-protector -fpic -fshort-wchar -mno-red-zone -Wall -Werror -fPIC   -o CMakeFiles/hwid.dir/src/finder.c.o   -c /home/q/Documents/Projects/06-01-2020/hwid/src/finder.c",
+  "file": "/home/q/Documents/Projects/06-01-2020/hwid/src/finder.c"
+},
+{
+  "directory": "/home/q/Documents/Projects/06-01-2020/hwid/build",
+  "command": "/usr/bin/gcc -Dhwid_EXPORTS -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol   --std=c11 -DGNU_EFI_USE_MS_ABI -fno-stack-protector -fpic -fshort-wchar -mno-red-zone -Wall -Werror -fPIC   -o CMakeFiles/hwid.dir/src/main.c.o   -c /home/q/Documents/Projects/06-01-2020/hwid/src/main.c",
+  "file": "/home/q/Documents/Projects/06-01-2020/hwid/src/main.c"
+}
+]
