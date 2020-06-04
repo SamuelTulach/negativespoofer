@@ -5,8 +5,8 @@
 
 void EditRandom(SMBIOS_STRUCTURE_POINTER table, SMBIOS_STRING* field) 
 {
-    char buffer[512];
-    RandomText(buffer, 513);
+    char buffer[257];
+    RandomText(buffer, 256);
 
     EditString(table, field, buffer);
 }
