@@ -88,24 +88,15 @@ SMBIOS_STRUCTURE_TABLE* FindEntry()
 {
     SMBIOS_STRUCTURE_TABLE* address = FindBySignature();
     if (address) 
-    {
-        Print(L"[INFO] Using entry found by signanture\n");
-        return address;
-    }       
+        return address;      
 
     address = FindByConfig();
     if (address) 
-    {
-        Print(L"[INFO] Using entry found by configs\n");
         return address;
-    }
 
     address = FindByHob();
     if (address) 
-    {
-        Print(L"[INFO] Using entry found by hob data\n");
         return address;
-    }
          
     return 0;
 }
