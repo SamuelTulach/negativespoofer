@@ -111,8 +111,8 @@ void EditString(SMBIOS_STRUCTURE_POINTER table, SMBIOS_STRING* field, const char
     UINTN astrLength = SpaceLength(astr, 0);
     UINTN bstrLength = SpaceLength(buffer, 256);
 
-    Print(L"Table type %d field %d\n", table.Hdr->Type, *field);
-    Print(L"Old string length=%d new length=%d\n", astrLength, bstrLength);
+    // Print(L"Table type %d field %d\n", table.Hdr->Type, *field);
+    // Print(L"Old string length=%d new length=%d\n", astrLength, bstrLength);
 
     if (bstrLength < astrLength) 
     {
