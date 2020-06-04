@@ -23,4 +23,4 @@ ls
 hwid.efi
 ```
 7. Now you should see a log of the spoofer. If you do and there are no error, it means that it works!
-8. Boot the os. Try typing exit and if you OS starts booting without the PC doing a full reboot, you should be fine. If not, you will need to locate bootx64.efi and run it to boot your system.
+8. Boot the os. Try typing exit and if your OS starts booting without the PC doing a full reboot, you should be fine. If not, you will need to locate bootx64.efi and run it to boot your system.
