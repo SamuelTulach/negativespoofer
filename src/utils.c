@@ -1,15 +1,21 @@
 #include "general.h"
 #include "utils.h"
 
+int lastRandom = 0;
 int RandomNumber(int l, int h) 
 {
     EFI_TIME time;
     EFI_TIME_CAPABILITIES cap;
     gRT->GetTime(&time, &cap); // hopefully this does not fail
+
+    if (lastRandom == 0) 
+    {
+        lastRandom = time.Day + time.Hour + time.Minute + time.Second + time.Nanosecond;
+    }
+    lastRandom += time.Minute;
     
-    int moment = time.Day + time.Hour + time.Minute + time.Second + time.Nanosecond;
-    
-    int num = moment % (h - l + 1);
+    int num = lastRandom % (h - l + 1);
+
     return num + l;
 }
 

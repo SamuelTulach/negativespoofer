@@ -90,13 +90,13 @@ SMBIOS_STRUCTURE_TABLE* FindEntry()
     if (address)
         return address;
 
-    // address = FindByHob();
-    // if (address)
-    //     return address;
-
     address = FindByConfig();
     if (address)
         return address;
 
+    address = FindByHob();
+    if (address)
+         return address;
+         
     return 0;
 }

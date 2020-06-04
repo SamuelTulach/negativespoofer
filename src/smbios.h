@@ -51,7 +51,7 @@
 
 #define SMBIOS_TYPE_END_OF_TABLE     0x007F
 
-UINT64 TableLenght(SMBIOS_STRUCTURE_POINTER table);
+UINT16 TableLenght(SMBIOS_STRUCTURE_POINTER table);
 SMBIOS_STRUCTURE_POINTER FindTableByType(SMBIOS_STRUCTURE_TABLE* entry, UINT8 type, UINTN index);
 UINTN SpaceLength(const char* text, UINTN maxLength);
 void EditString(SMBIOS_STRUCTURE_POINTER table, SMBIOS_STRING* field, const char* buffer);

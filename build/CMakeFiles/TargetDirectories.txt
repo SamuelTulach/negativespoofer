@@ -1,3 +1,0 @@
-/home/q/Documents/Projects/06-01-2020/hwid/build/CMakeFiles/rebuild_cache.dir
-/home/q/Documents/Projects/06-01-2020/hwid/build/CMakeFiles/edit_cache.dir
-/home/q/Documents/Projects/06-01-2020/hwid/build/CMakeFiles/hwid.dir

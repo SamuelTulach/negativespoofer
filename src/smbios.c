@@ -1,7 +1,7 @@
 #include "general.h"
 #include "smbios.h"
 
-UINT64 TableLenght(SMBIOS_STRUCTURE_POINTER table) 
+UINT16 TableLenght(SMBIOS_STRUCTURE_POINTER table) 
 {
     char* pointer = (char*)(table.Raw + table.Hdr->Length);
     while ((*pointer != 0) || (*(pointer + 1) != 0)) 
@@ -75,7 +75,7 @@ UINTN SpaceLength(const char* text, UINTN maxLength)
 
 void EditString(SMBIOS_STRUCTURE_POINTER table, SMBIOS_STRING* field, const char* buffer) 
 {
-    if (!table.Raw || !field || field)
+    if (!table.Raw || !buffer || !field)
         return;
 
     UINT8 index = 1;
@@ -110,31 +110,16 @@ void EditString(SMBIOS_STRUCTURE_POINTER table, SMBIOS_STRING* field, const char
 
     UINTN astrLength = SpaceLength(astr, 0);
     UINTN bstrLength = SpaceLength(buffer, 256);
-    UINTN length = TableLenght(table);
 
-    CHAR8* c1;
-    CHAR8* c2;
+    // Print(L"Table type %d field %d\n", table.Hdr->Type, *field);
+    // Print(L"Old string length=%d new length=%d\n", astrLength, bstrLength);
 
-    if (bstrLength > astrLength) 
+    if (bstrLength < astrLength) 
     {
-        c1 = (CHAR8*)table.Raw + length;
-        c2 = c1  + bstrLength - astrLength;
-        *c2 = 0;
-        while ((char*)c1 != astr) *(--c2) = *(--c1);
-    } else if (bstrLength < astrLength) 
-    {
-        c1 = (CHAR8*)(astr + astrLength);
-        c2 = (CHAR8*)(buffer + bstrLength);
-
-        while (c1 != ((CHAR8*)table.Raw + length)) 
-        {
-            *c2++ = *c1++;
-        }
-        
-        *c2 = 0;
-        *(--c2) = 0;
+        Print(L"[FAIL] Input string too short\n");
+        return;
     }
 
-    CopyMem(astr, buffer, bstrLength);
-    *(astr + bstrLength) = 0;
+    // I am lazy piece of shit and I am not implementing some string resizing
+    CopyMem(astr, buffer, astrLength - 1);
 }
