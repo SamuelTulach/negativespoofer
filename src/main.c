@@ -6,6 +6,10 @@ EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable)
 {
     InitializeLib(ImageHandle, SystemTable);
 
+    // anti p2c
+    Print(L"negativespoofer\n");
+    Print(L"https://github.com/SamuelTulach/negativespoofer\n\n");
+    
     Print(L"[WORK] Searching for SMBIOS table entry...\n");
     SMBIOS_STRUCTURE_TABLE* smbiosEntry = FindEntry();
     if (!smbiosEntry) 
