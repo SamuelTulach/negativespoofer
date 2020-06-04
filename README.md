@@ -13,10 +13,7 @@ useful pages
 The name *negative* was my genious idea, because the spoofer runs before the system even boots, that means the time when it's running is negative relatively to system boot time. It fills SMBIOS tables (currently types 0 to 4) with random generated junk. It is heavilly based on [Clover bootloader's SMBIOS patching implementation](https://github.com/CloverHackyColor/CloverBootloader/blob/22f9adcbc97e1291bc2361d69b66f96a29af0d05/rEFIt_UEFI/Platform/smbios.cpp).
 
 <p align="center">
-  <img src="img/before.png">
-</p>
-<p align="center">
-  <img src="img/after.png">
+  <img src="img/all.png">
 </p>
 
 ## Useful links
