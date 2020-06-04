@@ -18,7 +18,7 @@ The name *negative* was my genious idea, because the spoofer runs before the sys
 
 ## Useful links
 To make this repo more readable, I made different pages for different topics.
-- How to compile (Linux)
-- How to compile (Windows)
-- How to use
-- Reporting issue
+- [How to compile (Linux)](pages/LINUX.md)
+- [How to compile (Windows)](pages/WINDOWS.md)
+- [How to use](pages/USE.md)
+- [Reporting issue](pages/BUG.md)
