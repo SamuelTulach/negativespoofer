@@ -1,0 +1,2 @@
+# Reporting issue
+If you are having any issue, please [create an issue on this GitHub repo](https://github.com/SamuelTulach/negativespoofer/issues). I will not be responding to any emails/messages regarding this project.
