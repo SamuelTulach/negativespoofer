@@ -8,7 +8,10 @@ void EditRandom(SMBIOS_STRUCTURE_POINTER table, SMBIOS_STRING* field)
     char buffer[258];
     RandomText(buffer, 257);
 
-    EditString(table, field, buffer);
+    if (field) 
+    {
+        EditString(table, field, buffer);
+    } 
 }
 
 void PatchType0(SMBIOS_STRUCTURE_TABLE* entry) 
