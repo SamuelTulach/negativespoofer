@@ -5,6 +5,9 @@ First download and install gcc, gnu-efi.
 ```
 sudo pacman -S gcc gnu-efi-libs cmake git
 ```
+```
+sudo apt install build-essential gnu-efi cmake git
+```
 This should install all required packages that you will need to build.
 
 Clone this repo.
